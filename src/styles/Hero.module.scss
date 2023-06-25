@@ -1,0 +1,48 @@
+.heroContainer{
+    background: #eeeded;
+    margin: 5rem 7rem 0 7rem;
+    padding: 2rem;
+    .heroHeader{
+        display: flex;
+        justify-content: space-between;
+        font-size: 14px;
+        font-weight: 500;
+        span{
+            max-width: 200px;
+        }
+    }
+    .heroBody{
+        font-size: 45px;
+        text-transform: uppercase;
+        max-width: 200px;
+        margin-top: 20px;
+        font-weight: 500;
+        img{
+            filter: grayscale(100%);
+        }
+    }
+    .heroFooter{
+        display: flex;
+        justify-content: space-between;
+        // width: 50%;
+        .heroFooterLeft{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            img{
+                transform: rotate(90deg);
+                cursor: pointer;
+            }
+            .description{
+                max-width: 250px;
+                margin-left: 10rem;
+                font-size: 20px;
+            }
+        }
+        .heroFooterRight{
+            font-size: 65px;
+            max-width: 300px;
+            font-weight: 500;
+        }
+    }
+}
