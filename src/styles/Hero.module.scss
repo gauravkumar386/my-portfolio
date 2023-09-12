@@ -1,48 +1,30 @@
 .heroContainer{
-    background: #eeeded;
-    margin: 5rem 7rem 0 7rem;
-    padding: 2rem;
-    .heroHeader{
-        display: flex;
-        justify-content: space-between;
-        font-size: 14px;
-        font-weight: 500;
+    color: #fff;
+    font-size: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 0px);
+    line-height: 1.3;
+    border-bottom: 1px solid #fff;
+    p{
         span{
-            max-width: 200px;
+            color: rgb(237, 61, 61);
         }
     }
-    .heroBody{
-        font-size: 45px;
-        text-transform: uppercase;
-        max-width: 200px;
-        margin-top: 20px;
-        font-weight: 500;
-        img{
-            filter: grayscale(100%);
-        }
-    }
-    .heroFooter{
+    button{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 20px;
+        font-weight: 600;
+        padding: 10px 20px 10px 20px;
+        background: transparent;
+        color: rgb(237, 61, 61);
+        border: 1px solid rgb(237, 61, 61);
+        cursor: pointer;
         display: flex;
-        justify-content: space-between;
-        // width: 50%;
-        .heroFooterLeft{
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
-            img{
-                transform: rotate(90deg);
-                cursor: pointer;
-            }
-            .description{
-                max-width: 250px;
-                margin-left: 10rem;
-                font-size: 20px;
-            }
-        }
-        .heroFooterRight{
-            font-size: 65px;
-            max-width: 300px;
-            font-weight: 500;
-        }
+        align-items: center;
+        column-gap: 10px;
     }
 }

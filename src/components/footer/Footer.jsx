@@ -3,7 +3,6 @@ import styles from '@/styles/Footer.module.scss'
 const Footer=()=>{
   return (
     <>
-      {/* <hr /> */}
       <div className={styles.footerContainer}>
         <p>© {new Date().getFullYear()} Gaurav's Portfolio</p>
         <div className={styles.socialIcons}>

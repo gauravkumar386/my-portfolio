@@ -1,0 +1,13 @@
+.goToTop{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 6px 10px;
+    background: transparent;
+    border: 1px solid #fff;
+    cursor: pointer;
+    svg{
+        font-size: 30px;
+        color: rgb(237, 61, 61);
+    }
+}
