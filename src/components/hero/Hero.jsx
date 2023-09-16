@@ -11,7 +11,7 @@ const Hero = () => {
     });
   };
   return (
-    <div className={styles.heroContainer}>
+    <div className={styles.heroContainer} id="home">
       <p>
         {`Hello, I'm `}<span>{`Gaurav`}</span>.
       </p>

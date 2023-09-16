@@ -1,11 +1,16 @@
+import Head from "next/head";
+import dynamic from "next/dynamic";
+import { MdKeyboardDoubleArrowUp } from "react-icons/md";
 import styles from "@/styles/Home.module.scss";
 
-import Header from "../components/header/Header";
-import Hero from "../components/hero/Hero";
-import About from "../components/about/About";
-import Projects from "../components/projects/Projects";
-import Footer from "../components/footer/Footer";
-import { MdKeyboardDoubleArrowUp } from "react-icons/md";
+const DynamicHeader = dynamic(() => import("../components/header/Header"));
+const DynamicHero = dynamic(() => import("../components/hero/Hero"));
+const DynamicAbout = dynamic(() => import("../components/about/About"));
+const DynamicProjects = dynamic(
+  () => import("../components/projects/Projects")
+);
+const DynamicContact = dynamic(() => import("../components/contact/Contact"));
+const DynamicFooter = dynamic(() => import("../components/footer/Footer"));
 
 export default function Home() {
   const scrollToPage = () => {
@@ -15,13 +20,17 @@ export default function Home() {
     });
   };
   return (
-    <>
-      <Hero />
-      <Header>
-        <About />
-        <Projects />
-        <Footer />
-      </Header>
+    <div className={styles.homeContainer}>
+      <Head>
+        <title>Gaurav Kumar</title>
+      </Head>
+      <DynamicHero />
+      <DynamicHeader>
+        <DynamicAbout />
+        <DynamicProjects />
+        <DynamicContact />
+      </DynamicHeader>
+      <DynamicFooter />
       <div
         id="goToTop"
         className={styles.goToTop}
@@ -31,6 +40,6 @@ export default function Home() {
       >
         <MdKeyboardDoubleArrowUp />
       </div>
-    </>
+    </div>
   );
 }

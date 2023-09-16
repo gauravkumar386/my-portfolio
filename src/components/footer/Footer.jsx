@@ -1,39 +1,40 @@
 /* eslint-disable react/no-unescaped-entities */
-import styles from '@/styles/Footer.module.scss'
-const Footer=()=>{
+import styles from "@/styles/Footer.module.scss";
+import Link from "next/link";
+import { AiOutlineMail } from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
+import { AiFillLinkedin } from "react-icons/ai";
+import { AiOutlineCopyrightCircle } from "react-icons/ai";
+
+const Footer = () => {
   return (
     <>
       <div className={styles.footerContainer}>
-        <p>© {new Date().getFullYear()} Gaurav's Portfolio</p>
         <div className={styles.socialIcons}>
-          <a
-            href="https://www.hackerrank.com/gauravk410?hr_r=1"
-            aria-label="Hackerrank"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fa-brands fa-code"></i>
-          </a>
-          <a
-            href="https://github.com/olawanlejoel"
+          <Link
+            href="https://github.com/gauravkumar386"
             aria-label="GitHub"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="fa-brands fa-github"></i>
-          </a>
-          <a
+            <AiFillGithub />
+          </Link>
+          <Link
             href="https://www.linkedin.com/in/gaurav-kumar-4a75311ab/"
             aria-label="LinkedIn"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="fa-brands fa-linkedin"></i>
-          </a>
+            <AiFillLinkedin />
+          </Link>
+          <Link href="mailto:gauravk410@gmail.com" aria-label="email">
+            <AiOutlineMail />
+          </Link>
         </div>
+        <p><AiOutlineCopyrightCircle/> 2023 Gaurav's Portfolio</p>
       </div>
     </>
   );
 };
 
-export default Footer
+export default Footer;

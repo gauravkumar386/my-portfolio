@@ -1,10 +1,11 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+/* eslint-disable @next/next/no-sync-scripts */
+import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
   return (
     <Html lang="en">
       <Head>
-      <meta charSet="utf-8" />
+        <meta charSet="utf-8" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -12,11 +13,15 @@ export default function Document() {
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
         />
+        <script
+          type="text/javascript"
+          src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+        />
       </Head>
       <body>
         <Main />
         <NextScript />
       </body>
     </Html>
-  )
+  );
 }

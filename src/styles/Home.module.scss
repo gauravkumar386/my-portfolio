@@ -1,13 +1,20 @@
-.goToTop{
+@import "../styles/Variable.scss";
+.homeContainer {
+  .goToTop {
     position: fixed;
-    bottom: 2rem;
+    bottom: 4.5rem;
     right: 2rem;
     padding: 6px 10px;
     background: transparent;
     border: 1px solid #fff;
     cursor: pointer;
-    svg{
-        font-size: 30px;
-        color: rgb(237, 61, 61);
+    @include mobile {
+      bottom: 3.5rem;
+      right: 1.5rem;
     }
+    svg {
+      font-size: 30px;
+      color: rgb(237, 61, 61);
+    }
+  }
 }
