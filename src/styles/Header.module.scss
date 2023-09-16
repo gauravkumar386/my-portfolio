@@ -1,5 +1,5 @@
-@import '../styles/Variable.scss';
-.headerContainer{
+@import "../styles/Variable.scss";
+.headerContainer {
   width: 100%;
   color: #fff;
   background: #000;
@@ -11,52 +11,52 @@
   display: flex;
   justify-content: end;
   column-gap: 60px;
-  box-shadow:
-    inset 0 -3em 3em rgba(0, 0, 0, 0.1),
-    0 0 0 2px rgba(121, 121, 121, 0.3),
-    0.3em 0.3em 1em rgba(255, 255, 255, 0.3);
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+    0 0 0 2px rgba(0, 0, 0, 0.3), 0.3em 0.3em 1em rgba(255, 255, 255, 0.3);
   align-items: center;
-  @include tablet{
+  @include tablet {
     padding: 20px;
     justify-content: space-between;
   }
-  span{
+  span {
     cursor: pointer;
-    @include tablet{
+    @include tablet {
       display: none;
     }
   }
-  span:hover{
+  span:hover {
     border-bottom: 1px solid #fff;
   }
-  .menuIcon{
+  .menuIcon {
     display: none;
-    @include tablet{
+    @include tablet {
       display: block;
     }
   }
-  .dropdownList{
+  .dropdownList {
     background: #000;
     position: absolute;
     top: 3.5rem;
     width: 100%;
     left: 0;
-    transition: all .5s ease-in;
+    transition: all 0.5s ease-in;
     display: none;
-    @include tablet{
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+      0 0 0 2px rgba(28, 28, 28, 0.3), 0.3em 0.3em 1em rgba(255, 255, 255, 0.3);
+    @include tablet {
       display: block;
     }
-    ul li{
-      border: 1px solid #464545;
+    ul li {
+      border-bottom: 1px solid #464545;
       list-style-type: none;
       padding: 15px;
     }
   }
-  a{
+  a {
     text-decoration: none;
     color: #fff;
   }
-  button{
+  button {
     padding: 10px 15px;
     font-family: "Courier New", Courier, monospace;
     font-weight: 600;

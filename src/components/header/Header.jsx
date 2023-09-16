@@ -6,6 +6,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import Link from "next/link";
 
 export default function Header(props) {
+  const { setShowGoToTop } = props;
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [topValue, setTopValue] = useState("");
   const scrollToView = (elementId) => {
@@ -29,7 +30,7 @@ export default function Header(props) {
       header.style.position = "relative";
       header.style.removeProperty("top");
     }
-    if(window.pageYOffset===0 && sticky===0){
+    if (window.pageYOffset === 0 && sticky === 0) {
       setTopValue("");
     }
   }, [topValue]);
@@ -37,8 +38,13 @@ export default function Header(props) {
   useEffect(() => {
     window.onscroll = function () {
       getStickyHeader();
+      if (window.pageYOffset > 175) {
+        setShowGoToTop(true);
+      } else {
+        setShowGoToTop(false);
+      }
     };
-  }, [getStickyHeader]);
+  }, [getStickyHeader, setShowGoToTop]);
   return (
     <>
       <div className={styles.headerContainer} id="homepage">
@@ -57,45 +63,44 @@ export default function Header(props) {
             onClick={() => setIsMenuOpen(false)}
           />
         )}
-        <div
-          className={styles.dropdownList}
-          style={{ display: isMenuOpen ? "" : "none" }}
-        >
-          <ul>
-            <li
-              onClick={() => {
-                scrollToView("home");
-                setIsMenuOpen(false);
-              }}
-            >
-              Home
-            </li>
-            <li
-              onClick={() => {
-                scrollToView("about");
-                setIsMenuOpen(false);
-              }}
-            >
-              About
-            </li>
-            <li
-              onClick={() => {
-                scrollToView("projects");
-                setIsMenuOpen(false);
-              }}
-            >
-              Projects
-            </li>
-            <li
-              onClick={() => {
-                scrollToView("contact");
-                setIsMenuOpen(false);
-              }}
-            >
-              Contact
-            </li>
-          </ul>
-        </div>
+        {isMenuOpen && (
+          <div className={styles.dropdownList}>
+            <ul>
+              <li
+                onClick={() => {
+                  scrollToView("home");
+                  setIsMenuOpen(false);
+                }}
+              >
+                Home
+              </li>
+              <li
+                onClick={() => {
+                  scrollToView("about");
+                  setIsMenuOpen(false);
+                }}
+              >
+                About
+              </li>
+              <li
+                onClick={() => {
+                  scrollToView("projects");
+                  setIsMenuOpen(false);
+                }}
+              >
+                Projects
+              </li>
+              <li
+                onClick={() => {
+                  scrollToView("contact");
+                  setIsMenuOpen(false);
+                }}
+              >
+                Contact
+              </li>
+            </ul>
+          </div>
+        )}
         <Link
           href={"Gaurav_Resume.pdf"}
           download="Gaurav_Resume.pdf"

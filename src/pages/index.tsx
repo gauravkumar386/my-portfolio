@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import { MdKeyboardDoubleArrowUp } from "react-icons/md";
@@ -12,7 +13,8 @@ const DynamicProjects = dynamic(
 const DynamicContact = dynamic(() => import("../components/contact/Contact"));
 const DynamicFooter = dynamic(() => import("../components/footer/Footer"));
 
-export default function Home() {
+const Home = () => {
+  const [showGoToTop, setShowGoToTop] = useState(false);
   const scrollToPage = () => {
     window.scrollTo({
       top: 0,
@@ -25,21 +27,25 @@ export default function Home() {
         <title>Gaurav Kumar</title>
       </Head>
       <DynamicHero />
-      <DynamicHeader>
+      <DynamicHeader setShowGoToTop={setShowGoToTop}>
         <DynamicAbout />
         <DynamicProjects />
         <DynamicContact />
       </DynamicHeader>
       <DynamicFooter />
-      <div
-        id="goToTop"
-        className={styles.goToTop}
-        onClick={() => {
-          scrollToPage();
-        }}
-      >
-        <MdKeyboardDoubleArrowUp />
-      </div>
+      {showGoToTop && (
+        <div
+          id="goToTop"
+          className={styles.goToTop}
+          onClick={() => {
+            scrollToPage();
+          }}
+        >
+          <MdKeyboardDoubleArrowUp />
+        </div>
+      )}
     </div>
   );
-}
+};
+
+export default Home;
