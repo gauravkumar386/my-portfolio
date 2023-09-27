@@ -18,6 +18,11 @@ export default function Document() {
           src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
         />
       </Head>
+      <section>
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+      </section>
       <body>
         <Main />
         <NextScript />

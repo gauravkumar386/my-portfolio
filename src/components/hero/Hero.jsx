@@ -1,5 +1,6 @@
 import styles from "@/styles/Hero.module.scss";
 import { FaArrowDown } from "react-icons/fa";
+import Typewriter from "typewriter-effect";
 
 const Hero = () => {
   const scrollView = () => {
@@ -11,11 +12,17 @@ const Hero = () => {
     });
   };
   return (
-    <div className={styles.heroContainer} id="home">
-      <p>
-        {`Hello, I'm `}<span>{`Gaurav`}</span>.
-      </p>
-      <p>{`I'm a full stack web developer.`}</p>
+    <div className={styles.heroContainer}>
+      <Typewriter
+        onInit={(typewriter) => {
+          typewriter
+            .typeString(
+              `Hello, I'm Gaurav. <br/>
+              I'm a full stack web developer.`
+            )
+            .start();
+        }}
+      />
       <button onClick={scrollView}>
         View my work <FaArrowDown />
       </button>
