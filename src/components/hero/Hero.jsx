@@ -18,7 +18,7 @@ const Hero = () => {
           typewriter
             .typeString(
               `Hello, I'm Gaurav. <br/>
-              I'm a full stack web developer.`
+              I'm a front web/mobile developer.`
             )
             .start();
         }}
