@@ -31,7 +31,7 @@ const Footer = () => {
             <AiOutlineMail />
           </Link>
         </div>
-        <p><AiOutlineCopyrightCircle/> 2023 Gaurav's Portfolio</p>
+        <p><AiOutlineCopyrightCircle/> 2024 Gaurav's Portfolio</p>
       </div>
     </>
   );
