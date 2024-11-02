@@ -19,7 +19,7 @@ const About = () => {
       <div className={styles.bodyContainer}>
         <div className={styles.leftContainer}>
           <Image src={profile} alt="profile" height={280} width={300} />
-          <p>{`I'm a frontend web/mobile developer with 5.3 years of experience 
+          <p>{`I'm a frontend web/mobile developer with 5.4 years of experience 
                     and passion for Javascript, React & all things web development. 
                     The unique combination of creativity, problem solving,
                     UI designing and learning new things drives my excitement and 
